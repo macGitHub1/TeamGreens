@@ -1,4 +1,4 @@
-First you need to clone our repo:
+ First you need to clone our repo:
   git clone https://github.com/macGitHub1/TeamGreens.git
 
 Change directory to your new clone project "TeamGreens"
@@ -10,6 +10,11 @@ Next you need to create your branch:
  
 checkpoint:
  You should see the README.md file.
+
+Next make all your changes in your branch
+
+To push your changes to the repo  must use:
+git push origin TeamGreens_< Your Initials>
 
  TODO:
   I will check-in  the instructions and keep them current as we go.
