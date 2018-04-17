@@ -121,7 +121,7 @@ def run_total():
         "robbery":robbery,
         "violent_crime":violent_crime
         })
-    crime_date_f_1=crime_data_1.loc[(crime_data["year"] == 2010)|(crime_data["year"] == 2016)].copy()
+    crime_date_f_1=crime_data_1.loc[(crime_data_1["year"] == 2010)|(crime_data_1["year"] == 2016)].copy()
     total_Crime=crime_date_f_1crime_date_f_1.burglary+crime_date_f_1.aggravated_assault+ \
     crime_date_f_1.motor_vehicle_theft \
     +crime_date_f_1.property_crime+crime_date_f_1.violent_crime+crime_date_f_1.robbery+crime_date_f_1.homicide+ \
