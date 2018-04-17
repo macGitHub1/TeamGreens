@@ -9,11 +9,12 @@ def run():
     #Get source data
     data_source = pd.read_csv('Data_em.csv')
     # Show the results of a linear regression within each dataset
-    sns.lmplot(data=data_source,
+    fig = sns.lmplot(data=data_source,
            x='Marijuana',
            y='Alcohol',
            hue='State',
            fit_reg=False)
+    fig.savefig('US.png')
 
 def runState(state = "Total U.S.", drug = "Alcohol" ):
     #Get source data
@@ -24,6 +25,8 @@ def runState(state = "Total U.S.", drug = "Alcohol" ):
     fig = plt.figure()
     ax = plt.axes()   
     ax.plot(sorted_state_df["Year"],sorted_state_df[drug])
+    outputPng = state + drug +".png"
+    plt.savefig(outputPng)
 
     
 def runBothState(state = "Total U.S."):
