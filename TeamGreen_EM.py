@@ -23,7 +23,8 @@ def runState(state = "Total U.S.", drug = "Alcohol" ):
     state_df = data_source.set_index("State")
     sorted_state_df = state_df .loc[state].sort_values("Year",ascending=False)    
     fig = plt.figure()
-    ax = plt.axes()   
+    ax = plt.axes()
+    plt.ylabel("Percentage of Population")
     ax.plot(sorted_state_df["Year"],sorted_state_df[drug])
     outputPng = state + drug +".png"
     plt.savefig(outputPng)
@@ -39,5 +40,5 @@ def runBothState(state = "Total U.S."):
     ax1 = plt.axes()
     ax2 = plt.axes()
     ax1.plot(sorted_state_df["Year"],sorted_state_df["Alcohol"])
-    ax1.plot(sorted_state_df["Year"],sorted_state_df["Marijuana"])
+    ax2.plot(sorted_state_df["Year"],sorted_state_df["Marijuana"])
 
